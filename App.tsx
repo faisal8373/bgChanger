@@ -36,9 +36,11 @@ const generateRandomColor = () => {
   return (
     <>
     <StatusBar backgroundColor={color}/>
-    <View style={[styles.button, {backgroundColor: color}]}>
-    <TouchableOpacity onPress={generateRandomColor} style={styles.button} >
-      <Text style={styles.text}>Tap me</Text>
+    <View style={[styles.container, {backgroundColor: color}]}>
+    <TouchableOpacity onPress={generateRandomColor} >
+      <View style={styles.button}>
+      <Text style={styles.text}>Change Color</Text>
+      </View>
     </TouchableOpacity>
 </View>
     </>
@@ -54,14 +56,17 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 30,
-    color: 'white'
+    color: 'white',
+    margin: 10,
+    marginHorizontal: 20,
   },
-  button: {
+    button: {
    
     backgroundColor: 'green',
-    padding: 10,
-    borderRadius: 5,
-    width: "50%",
+    
+    borderRadius: 20,
+   
+    
     
   }
 });

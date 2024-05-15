@@ -30,7 +30,7 @@ function App(): React.JSX.Element {
 const [color, setColor] = useState('#6A1B4D');
   
 const generateRandomColor = () => {
-  let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+  let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16); // 16777215 equals ffffff in hex
   setColor(randomColor);
 }
   return (
